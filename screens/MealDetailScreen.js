@@ -23,7 +23,6 @@ function MealDetailPage({ route }) {
 
   useLayoutEffect(() => {
     navigation.setOptions({
-      title: selectedMeal.title,
       headerRight: ()=>{
         return <IconButton icon="star" size={24} color="white" onPress={headerButtonPressHandler} />
       }
