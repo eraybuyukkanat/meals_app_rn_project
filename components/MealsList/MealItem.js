@@ -1,8 +1,8 @@
 import { Image, Platform } from "react-native";
 import { View, Pressable, Text, StyleSheet } from "react-native";
-import { MEALS, CATEGORIES } from "../data/dummy-data";
+import { MEALS, CATEGORIES } from "../../data/dummy-data";
 import { useNavigation } from "@react-navigation/native";
-import MealDetails from "./MealDetails";
+import MealDetails from "../MealDetails";
 function MealItem({ title, imageUrl, duration, complexity, affordability,id}) {
 
 

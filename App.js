@@ -11,6 +11,7 @@ import MealDetailPage from "./screens/MealDetailScreen";
 import { Text } from "react-native";
 import { Button } from "react-native";
 import FavoriteScreen from "./screens/FavoriteScreen";
+import FavoritesContextProvider from "./store/context/favorites-context";
 const Stack = createNativeStackNavigator();
 const Drawer = createDrawerNavigator();
 
@@ -46,6 +47,9 @@ export default function App() {
   return (
     <>
       <StatusBar style="light" />
+
+      <FavoritesContextProvider>
+
       <NavigationContainer>
         <Stack.Navigator
           initialRouteName="Drawer"
@@ -75,6 +79,8 @@ export default function App() {
           <Stack.Screen name="MealDetailPage" component={MealDetailPage} options={{title: "About the Meal"}} />
         </Stack.Navigator>
       </NavigationContainer>
+
+      </FavoritesContextProvider>
     </>
   );
 }
